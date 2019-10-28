@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel Reservations</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div align="center">
+        <h3>Hotel Reservations</h3>
+        <p th:if"${param.error}" th:text="${errorMsg}" class="error"></p>
+        <form method="POST" th:action="@{/app/login}">
+            <fieldset>
+                <label class="etiqueta">Usuario</label>
+                <input type="text" name="username">
+                <br>
+                <br>
+                <label class="etiqueta">Password</label>
+                <input type="password" name="password">
+                <br>
+                <input type="submit" value="Login">
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+</html>
